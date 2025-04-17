@@ -8,19 +8,15 @@ return new class extends Migration
 {
     public function up()
     {
-        Schema::create('customers', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table->string('email')->unique();
-            $table->string('phone');
-            $table->text('address')->nullable();
+        Schema::table('customers', function (Blueprint $table) {
             $table->enum('status', ['active', 'inactive'])->default('active');
-            $table->timestamps();
         });
     }
 
     public function down()
     {
-        Schema::dropIfExists('customers');
+        Schema::table('customers', function (Blueprint $table) {
+            $table->dropColumn('status');
+        });
     }
 }; 

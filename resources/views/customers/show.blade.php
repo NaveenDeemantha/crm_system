@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.dashboard')
 
 @section('content')
 <div class="container mx-auto px-4 py-8">
@@ -39,6 +39,14 @@
                 <div>
                     <h3 class="text-sm font-medium text-gray-500">Address</h3>
                     <p class="mt-1 text-sm text-gray-900">{{ $customer->address }}</p>
+                </div>
+                <div>
+                    <h3 class="text-sm font-medium text-gray-500">Status</h3>
+                    <p class="mt-1 text-sm text-gray-900">
+                        <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full {{ $customer->status == 'active' ? 'bg-green-100 text-green-800' : 'bg-red-100 text-red-800' }}">
+                            {{ ucfirst($customer->status) }}
+                        </span>
+                    </p>
                 </div>
             </div>
         </div>

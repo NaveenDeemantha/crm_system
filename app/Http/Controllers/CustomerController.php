@@ -25,6 +25,7 @@ class CustomerController extends Controller
             'email' => 'required|email|unique:customers',
             'phone' => 'required|string|max:20',
             'address' => 'nullable|string',
+            'status' => 'required|in:active,inactive',
         ]);
 
         Customer::create($validated);
@@ -50,6 +51,7 @@ class CustomerController extends Controller
             'email' => 'required|email|unique:customers,email,' . $customer->id,
             'phone' => 'required|string|max:20',
             'address' => 'nullable|string',
+            'status' => 'required|in:active,inactive',
         ]);
 
         $customer->update($validated);

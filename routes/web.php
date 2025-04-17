@@ -2,13 +2,19 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProposalController;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    $totalCustomers = \App\Models\Customer::count();
+    $totalProposals = \App\Models\Proposal::count();
+    return view('dashboard', [
+        'totalCustomers' => $totalCustomers,
+        'totalProposals' => $totalProposals
+    ]);
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
@@ -16,6 +22,8 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+Route::resource('proposals', ProposalController::class);
 
 require __DIR__.'/auth.php';
 require __DIR__.'/customers.php';
