@@ -36,7 +36,7 @@
             <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
                 <div class="p-4 sm:p-6">
                     <div class="flex items-center">
-                        <div class="flex-shrink-0 bg-green-500 rounded-md p-2 sm:p-3">
+                        <div class="flex-shrink-0 bg-indigo-500 rounded-md p-2 sm:p-3">
                             <svg class="h-5 sm:h-6 w-5 sm:w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                             </svg>
@@ -44,6 +44,23 @@
                         <div class="ml-4 sm:ml-5">
                             <h3 class="text-base sm:text-lg font-medium text-gray-900">Total Proposals</h3>
                             <p class="text-2xl sm:text-3xl font-semibold text-gray-900">{{ $totalProposals }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Total Invoices Card -->
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg">
+                <div class="p-4 sm:p-6">
+                    <div class="flex items-center">
+                        <div class="flex-shrink-0 bg-green-500 rounded-md p-2 sm:p-3">
+                            <svg class="h-5 sm:h-6 w-5 sm:w-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                            </svg>
+                        </div>
+                        <div class="ml-4 sm:ml-5">
+                            <h3 class="text-base sm:text-lg font-medium text-gray-900">Total Invoices</h3>
+                            <p class="text-2xl sm:text-3xl font-semibold text-gray-900">{{ $totalInvoices }}</p>
                         </div>
                     </div>
                 </div>
