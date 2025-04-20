@@ -80,13 +80,24 @@ class InvoiceController extends Controller
 
     public function send(Invoice $invoice)
     {
-        // TODO: Implement email sending functionality
-        $invoice->update([
-            'status' => 'sent',
-            'sent_at' => now(),
-        ]);
+        try {
+            $invoice->customer->notify(new \App\Notifications\InvoiceNotification($invoice));
+            
+            $invoice->update([
+                'status' => 'sent',
+                'sent_at' => now(),
+            ]);
 
-        return redirect()->route('invoices.show', $invoice)
-            ->with('success', 'Invoice sent successfully.');
+            return redirect()->route('invoices.show', $invoice)
+                ->with('success', 'Invoice sent successfully.');
+        } catch (\Exception $e) {
+            return redirect()->route('invoices.show', $invoice)
+                ->with('error', 'Failed to send invoice. Please try again.');
+        }
+    }
+
+    public function payment(Invoice $invoice)
+    {
+        return view('invoices.payment', compact('invoice'));
     }
 } 
