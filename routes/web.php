@@ -4,6 +4,9 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProposalController;
 use App\Http\Controllers\InvoiceController;
+use Illuminate\Container\Attributes\Auth;
+
+
 
 Route::get('/', function () {
     return view('welcome');
@@ -30,5 +33,7 @@ Route::resource('proposals', ProposalController::class);
 Route::resource('invoices', InvoiceController::class);
 Route::post('invoices/{invoice}/send', [InvoiceController::class, 'send'])->name('invoices.send');
 
+
+//Auth::routes(['verify' => true])
 require __DIR__.'/auth.php';
 require __DIR__.'/customers.php';
