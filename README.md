@@ -16,12 +16,12 @@ Built with the goal of simplicity, scalability, and speed, it seamlessly integra
 ✨ Core Features at a Glance
 
 ✅ User Auth with Laravel Breeze
-👥 Customer Management — Add, Edit, Delete, View
-📑 Proposal Tracking — Organized, Editable, Reusable
-🧾 Invoice Generation — Easy, Fast & Professional
-💰 Transaction Records — Stay Financially Aware
-📬 Email Notifications via Mailtrap
-💳 Stripe Payment Integration
+👥 Customer Management — Add, Edit, Delete, View <br>
+📑 Proposal Tracking — Organized, Editable, Reusable<br>
+🧾 Invoice Generation — Easy, Fast & Professional<br>
+💰 Transaction Records — Stay Financially Aware<br>
+📬 Email Notifications via Mailtrap<br>
+💳 Stripe Payment Integration<br>
 ⚙️ Background Jobs with Laravel Queues (Queue Workers FTW)
 
 🛠️ How to Run Locally
