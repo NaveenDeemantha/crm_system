@@ -8,11 +8,13 @@
 </p>
 
 🚀 CRM System — Laravel 10 Powered Business Dashboard
+
 Welcome to your all-in-one CRM System — a clean, modern, and powerful dashboard application crafted with Laravel 10. Whether you're managing clients, sending proposals, generating invoices, or tracking transactions — this system has got your back.
 
 Built with the goal of simplicity, scalability, and speed, it seamlessly integrates with Stripe for payments and Mailtrap for email notifications — all wrapped in a secure authentication layer with Laravel Breeze.
 
 ✨ Core Features at a Glance
+
 ✅ User Auth with Laravel Breeze
 👥 Customer Management — Add, Edit, Delete, View
 📑 Proposal Tracking — Organized, Editable, Reusable
