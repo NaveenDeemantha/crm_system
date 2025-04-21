@@ -6,38 +6,36 @@
     <title>{{ config('app.name', 'CRM-Project') }}</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body class="bg-gray-100">
-    <div class="min-h-screen flex flex-col">
+<body class="home-body">
+    <div class="home-container">
         <!-- Simple Navigation -->
-        <nav class="bg-white shadow-sm">
-            <div class="max-w-7xl mx-auto px-4 py-4">
-                <div class="flex justify-between items-center">
-                    <div class="text-xl font-semibold text-gray-800">
-                        
-                    </div>
-                    <div class="space-x-4">
-                        @if (Route::has('login'))
-                            @auth
-                                <a href="{{ url('/dashboard') }}" class="text-gray-600 hover:text-gray-900">Dashboard</a>
-                            @else
-                                <a href="{{ route('login') }}" class="text-gray-600 hover:text-gray-900">Login</a>
-                                @if (Route::has('register'))
-                                    <a href="{{ route('register') }}" class="text-gray-600 hover:text-gray-900">Register</a>
-                                @endif
-                            @endauth
-                        @endif
-                    </div>
+        <nav class="home-nav">
+            <div class="home-nav-content">
+                <div class="home-logo">
+                    <!-- Logo or Branding here -->
+                </div>
+                <div class="home-auth-links">
+                    @if (Route::has('login'))
+                        @auth
+                            <a href="{{ url('/dashboard') }}" class="home-nav-link">Dashboard</a>
+                        @else
+                            <a href="{{ route('login') }}" class="home-nav-link">Login</a>
+                            @if (Route::has('register'))
+                                <a href="{{ route('register') }}" class="home-nav-link">Register</a>
+                            @endif
+                        @endauth
+                    @endif
                 </div>
             </div>
         </nav>
 
         <!-- Simple Content -->
-        <main class="flex-grow flex items-center justify-center">
-            <div class="text-center">
-                <h1 class="text-4xl font-bold text-gray-900 mb-4">Welcome to CRM System</h1>
-                <p class="text-gray-600 mb-8">Manage your business relationships effectively</p>
+        <main class="home-main-content">
+            <div class="home-welcome-text">
+                <h1 class="home-main-title">Welcome to CRM System</h1>
+                <p class="home-main-description">Manage your business relationships effectively</p>
                 @if (Route::has('register'))
-                    <a href="{{ route('register') }}" class="bg-blue-600 text-white px-6 py-2 rounded-md hover:bg-blue-700">
+                    <a href="{{ route('register') }}" class="home-register-btn">
                         Get Started
                     </a>
                 @endif
@@ -45,8 +43,8 @@
         </main>
 
         <!-- Simple Footer -->
-        <footer class="bg-white py-4">
-            <div class="max-w-7xl mx-auto px-4 text-center text-gray-500 text-sm">
+        <footer class="home-footer">
+            <div class="home-footer-text">
                 &copy; {{ date('Y') }} {{ config('app.name', 'Laravel') }}
             </div>
         </footer>
