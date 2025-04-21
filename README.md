@@ -15,7 +15,7 @@ Built with the goal of simplicity, scalability, and speed, it seamlessly integra
 
 ✨ Core Features at a Glance
 
-✅ User Auth with Laravel Breeze
+✅ User Auth with Laravel Breeze<br>
 👥 Customer Management — Add, Edit, Delete, View <br>
 📑 Proposal Tracking — Organized, Editable, Reusable<br>
 🧾 Invoice Generation — Easy, Fast & Professional<br>
@@ -64,13 +64,13 @@ php artisan queue:work
 
 
 🌐 Tech Stack
-Laravel 10
-Laravel Breeze
-Blade Templating + Alpine.js
-MySQL (XAMPP)
-Mailtrap for Dev Emails
-Stripe API for Payments
-Laravel Queues for Background Jobs
+Laravel 10<br>
+Laravel Breeze<br>
+Blade Templating + Alpine.js<br>
+MySQL (XAMPP)<br>
+Mailtrap for Dev Emails<br>
+Stripe API for Payments<br>
+Laravel Queues for Background Jobs<br>
 
 📌 Final Thoughts
 This CRM system is built to be clean, modular, and extendable. Whether you're building it for your business, portfolio, or next big startup — you're already halfway there. Dive into the code, customize it, and make it your own.
