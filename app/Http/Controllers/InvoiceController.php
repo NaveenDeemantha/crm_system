@@ -98,6 +98,6 @@ class InvoiceController extends Controller
 
     public function payment(Invoice $invoice)
     {
-        return view('invoices.payment', compact('invoice'));
+        return redirect()->route('checkout', $invoice);
     }
 } 

@@ -4,6 +4,8 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ProposalController;
 use App\Http\Controllers\InvoiceController;
+use App\Http\Controllers\StripeController;
+
 use Illuminate\Container\Attributes\Auth;
 
 
@@ -34,6 +36,9 @@ Route::resource('invoices', InvoiceController::class);
 Route::post('invoices/{invoice}/send', [InvoiceController::class, 'send'])->name('invoices.send');
 Route::get('invoices/{invoice}/payment', [InvoiceController::class, 'payment'])->name('invoices.payment');
 
+// Stripe Payment Routes
+Route::get('checkout/{invoice}', [StripeController::class, 'checkout'])->name('checkout');
+Route::get('payment/success/{invoice}', [StripeController::class, 'success'])->name('payment.success');
 
 //Auth::routes(['verify' => true])
 require __DIR__.'/auth.php';

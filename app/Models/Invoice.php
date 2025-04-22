@@ -19,11 +19,13 @@ class Invoice extends Model
         'due_date',
         'notes',
         'sent_at',
+        'paid_at',
     ];
 
     protected $casts = [
         'due_date' => 'datetime',
         'sent_at' => 'datetime',
+        'paid_at' => 'datetime',
         'amount' => 'decimal:2',
     ];
 
