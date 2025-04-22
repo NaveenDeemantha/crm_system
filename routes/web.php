@@ -36,6 +36,15 @@ Route::resource('invoices', InvoiceController::class);
 Route::post('invoices/{invoice}/send', [InvoiceController::class, 'send'])->name('invoices.send');
 Route::get('invoices/{invoice}/payment', [InvoiceController::class, 'payment'])->name('invoices.payment');
 
+// Transactions Route
+Route::get('/transactions', function () {
+    $transactions = \App\Models\Invoice::where('status', 'paid')
+        ->with('customer')
+        ->orderBy('paid_at', 'desc')
+        ->get();
+    return view('transactions.index', ['transactions' => $transactions]);
+})->middleware(['auth', 'verified'])->name('transactions.index');
+
 // Stripe Payment Routes
 Route::get('checkout/{invoice}', [StripeController::class, 'checkout'])->name('checkout');
 Route::get('payment/success/{invoice}', [StripeController::class, 'success'])->name('payment.success');

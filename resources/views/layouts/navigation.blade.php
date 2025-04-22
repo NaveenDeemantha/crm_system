@@ -57,6 +57,7 @@
             <x-responsive-nav-link :href="route('customers.index')" :active="request()->routeIs('customers.*')">Customers</x-responsive-nav-link>
             <x-responsive-nav-link :href="route('proposals.index')" :active="request()->routeIs('proposals.*')">Proposals</x-responsive-nav-link>
             <x-responsive-nav-link :href="route('invoices.index')" :active="request()->routeIs('invoices.*')">Invoices</x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('transactions.index')" :active="request()->routeIs('transactions.*')">Transactions</x-responsive-nav-link>
         </div>
 
         <div class="mobile-user">
