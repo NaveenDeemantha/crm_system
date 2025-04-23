@@ -16,7 +16,8 @@
 </head>
 <body class="font-sans antialiased">
     <div class="min-h-screen bg-gray-100">
-        <!-- Mobile menu button -->
+        
+        
         <div class="lg:hidden">
             <button type="button" class="fixed top-0 left-0 p-4 text-gray-500 hover:text-gray-600 focus:outline-none" id="mobile-menu-button">
                 <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -72,7 +73,7 @@
                     </a>
                 </nav>
 
-                <!-- User Profile and Actions -->
+
                 <div class="p-4 border-t">
                     <div class="flex items-center mb-4">
                         <div class="flex-shrink-0">
@@ -104,9 +105,9 @@
             </div>
         </div>
 
-        <!-- Main Content -->
+        
         <div class="lg:ml-64">
-            <!-- Page Heading -->
+           
             <header class="bg-white shadow">
                 <div class="h-16 px-4 py-6 mx-auto max-w-7xl sm:px-6 lg:px-8">
                     <h2 class="text-xl font-semibold leading-tight text-gray-800 text-center lg:text-left">
@@ -115,7 +116,7 @@
                 </div>
             </header>
 
-            <!-- Page Content -->
+            
             <main>
                 <div class="py-12">
                     <div class="mx-auto max-w-7xl sm:px-6 lg:px-8">

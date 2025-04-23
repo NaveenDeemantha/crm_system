@@ -14,7 +14,7 @@
         </a>
     </div>
 
-    <!-- Mobile View (Cards) -->
+    
     <div class="cards">
         @foreach($customers as $customer)
         <div class="card">
@@ -52,7 +52,6 @@
         @endforeach
     </div>
 
-    <!-- Desktop View (Table) -->
     <div class="table">
         <table>
             <thead>

@@ -8,11 +8,11 @@
 </head>
 <body class="home-body">
     <div class="home-container">
-        <!-- Simple Navigation -->
+        
         <nav class="home-nav">
             <div class="home-nav-content">
                 <div class="home-logo">
-                    <!-- Logo or Branding here -->
+                    
                 </div>
                 <div class="home-auth-links">
                     @if (Route::has('login'))
@@ -29,7 +29,7 @@
             </div>
         </nav>
 
-        <!-- Simple Content -->
+       
         <main class="home-main-content">
             <div class="home-welcome-text">
                 <h1 class="home-main-title">Welcome to CRM System</h1>
@@ -42,7 +42,7 @@
             </div>
         </main>
 
-        <!-- Simple Footer -->
+       
         <footer class="home-footer">
             <div class="home-footer-text">
                 &copy; {{ date('Y') }} {{ config('app.name', 'Laravel') }}

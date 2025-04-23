@@ -1,9 +1,9 @@
 <nav x-data="{ open: false }" class="navbar">
-    <!-- Top Navigation -->
+    >
     <div class="navbar-container">
         <div class="navbar-flex">
             <div class="navbar-left">
-                <!-- Navigation Links -->
+               
                 <div class="nav-links">
                     <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">Dashboard</x-nav-link>
                     <x-nav-link :href="route('customers.index')" :active="request()->routeIs('customers.*')">Customers</x-nav-link>
@@ -12,7 +12,7 @@
                 </div>
             </div>
 
-            <!-- User Dropdown -->
+            
             <div class="user-dropdown">
                 <x-dropdown align="right" width="48">
                     <x-slot name="trigger">
@@ -29,7 +29,7 @@
                     <x-slot name="content">
                         <x-dropdown-link :href="route('profile.edit')">Profile</x-dropdown-link>
 
-                        <!-- Logout -->
+                       
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
                             <x-dropdown-link :href="route('logout')" onclick="event.preventDefault(); this.closest('form').submit();">Log Out</x-dropdown-link>
@@ -38,7 +38,7 @@
                 </x-dropdown>
             </div>
 
-            <!-- Mobile Toggle -->
+            
             <div class="mobile-toggle">
                 <button @click="open = ! open" class="toggle-btn">
                     <svg class="icon-md" stroke="currentColor" fill="none" viewBox="0 0 24 24">
@@ -50,7 +50,7 @@
         </div>
     </div>
 
-    <!-- Mobile Menu -->
+    
     <div :class="{'block': open, 'hidden': ! open}" class="mobile-menu">
         <div class="mobile-nav-links">
             <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">Dashboard</x-responsive-nav-link>

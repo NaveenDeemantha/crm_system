@@ -20,7 +20,7 @@
         </div>
     @endif
 
-    <!-- Mobile View (Cards) -->
+    
     <div class="mobile-view">
         @foreach ($proposals as $proposal)
             <div class="proposal-card">
@@ -61,7 +61,7 @@
         @endforeach
     </div>
 
-    <!-- Desktop View (Table) -->
+    
     <div class="desktop-view">
         <div class="table-container">
             <table class="proposal-table">

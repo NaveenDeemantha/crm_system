@@ -22,7 +22,7 @@ class StripeController extends Controller
                         'name' => $invoice->title,
                         'description' => $invoice->description,
                     ],
-                    'unit_amount' => $invoice->amount * 100, // Convert to cents
+                    'unit_amount' => $invoice->amount * 100, 
                 ],
                 'quantity' => 1,
             ]],

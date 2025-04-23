@@ -4,7 +4,7 @@
 
 @section('content')
     <div class="space-y-6">
-        <!-- Welcome Card -->
+        
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">Welcome to your dashboard!</h3>
@@ -14,7 +14,7 @@
             </div>
         </div>
 
-        <!-- Stats Grid -->
+        
         <div class="dashboard-grid">
             <!-- Customers -->
             <div class="card">

@@ -18,7 +18,7 @@
         <div class="alert-success">{{ session('success') }}</div>
     @endif
 
-    <!-- Mobile Cards -->
+    
     <div class="mobile-cards">
         @foreach ($invoices as $invoice)
             <div class="invoice-card">
@@ -58,7 +58,7 @@
         @endforeach
     </div>
 
-    <!-- Desktop Table -->
+    
     <div class="desktop-table">
         <table>
             <thead>
